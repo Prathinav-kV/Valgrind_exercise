@@ -22,3 +22,9 @@
   rm -rf build/
 ```
 
+Q. What happens when the executable is linked statically? Does Valgrind still detect those same bugs? Why or why not?
+
+Answer:
+
+When the executable is linked statically, Valgrind may not detect the same bugs, particularly those related to dynamic library management. This is because Valgrind relies on instrumentation of shared libraries to monitor memory operations, and static linking may reduce its ability to track certain issues. Additionally, static linking can change the memory layout, potentially altering the behavior of bugs or their visibility.
+
